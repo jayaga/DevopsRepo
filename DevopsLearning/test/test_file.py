@@ -9,4 +9,8 @@ def test_add1():
 
 
 def test_add2():
-    assert (addnum(2, 4) == 6)
+    assert (addnum(2, 4) == 5)
+
+
+def test_add3():
+    assert (addnum(2, 5) == 7)
