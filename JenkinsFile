@@ -1,8 +1,11 @@
 pipeline {
-    agent any
+   
      def deploypath='workspace\\pipeline\\PipelineSource\\Pipeline\\target'
      def jenkishome = "${JENKINS_HOME}"
      def warpath= jenkishome+deploypath
+   
+    agent any
+   
            		
     stages {
         stage('Build') 
