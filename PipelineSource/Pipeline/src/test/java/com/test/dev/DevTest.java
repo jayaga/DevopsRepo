@@ -11,7 +11,7 @@ public class DevTest {
   public void test1() {
 	  if(System.getProperty("propFile")==null)
 		  System.setProperty("propFile","default");
-	  System.out.println("=======================Executing tests on ============ "+System.getProperty("propFile")+"  environment");
+	  System.out.println("=======================Executing tests on the ============ "+System.getProperty("propFile")+"  environment");
 	  
   }
   
