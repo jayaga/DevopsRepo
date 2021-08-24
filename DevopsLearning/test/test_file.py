@@ -1,5 +1,6 @@
 import pytest
 
+
 def addnum(a, b):
     return a + b
 
@@ -13,4 +14,4 @@ def test_add2():
 
 
 def test_add3():
-    assert (addnum(2, 5) == 7)
+    assert (addnum(2, 5) == 6)
