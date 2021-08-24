@@ -10,7 +10,7 @@ pipeline {
                 echo 'Building.....'
                 dir('PipelineSource\\Pipeline')
                  {
-                    bat 'mvn clean compile'  
+                    bat 'mvn -e clean compile'  
                  }
                 
             }
