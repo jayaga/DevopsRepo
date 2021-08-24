@@ -1,12 +1,7 @@
 pipeline {
    
-     def deploypath='workspace\\pipeline\\PipelineSource\\Pipeline\\target'
-     def jenkishome = "${JENKINS_HOME}"
-     def warpath= jenkishome+deploypath
-   
     agent any
-   
-           		
+             		
     stages {
         stage('Build') 
         {
@@ -37,9 +32,12 @@ pipeline {
             {
                steps 
            		 {
-              	  echo 'Running Deploy.....'
-             	  echo "${warpath}"
-             	  
+              	 	 echo 'Running Deploy.....'
+             	 	 dir("${JENKINS_HOME}\\workspace\\pipeline\\PipelineSource\\Pipeline\\target") 
+             	 	 {
+    					bat 'copy Pipeline*.jar C:\\Deployment'
+					 }
+             	  	
            		 }
         	}
     }
