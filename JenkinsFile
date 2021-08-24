@@ -19,6 +19,12 @@ pipeline {
                     }
                
             }
+            
+            stage('Deploy') {
+            steps {
+                echo 'Running Deploy.....'
+                echo ${JENKINS_HOME}
+            }
         }
     }
 }
