@@ -15,7 +15,7 @@ pipeline {
             steps {
                 echo 'Running Tests.....'
                 dir('PipelineSource\\Pipeline') {
-                     bat 'mvn clean test -P dev'  
+                     bat "mvn clean test -P ${environment}"  
                     }
                
             }
