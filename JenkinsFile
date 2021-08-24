@@ -1,30 +1,38 @@
 pipeline {
     agent any
-
     stages {
-        stage('Build') {
-            steps {
+        stage('Build') 
+        {
+            steps 
+            {
                 echo 'Building.....'
-                dir('PipelineSource\\Pipeline') {
+                dir('PipelineSource\\Pipeline')
+                 {
                     bat 'mvn clean compile'  
-                    }
+                 }
                 
             }
-        }
-         stage('Test') {
-            steps {
+         }
+         stage('Test') 
+         {
+            steps 
+            {
                 echo 'Running Tests.....'
-                dir('PipelineSource\\Pipeline') {
+                dir('PipelineSource\\Pipeline') 
+                {
                      bat 'mvn clean package -P qa' 
-                    }
+                }
                
             }
-            
-            stage('Deploy') {
-            steps {
-                echo 'Running Deploy.....'
-                echo ${JENKINS_HOME}
-            }
-        }
+          }
+           
+           stage('Deploy')
+            {
+           		 steps 
+           		 {
+              	  echo 'Running Deploy.....'
+             	  echo "${JENKINS_HOME}"
+           		 }
+        	}
     }
 }
