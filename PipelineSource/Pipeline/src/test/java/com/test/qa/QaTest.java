@@ -8,7 +8,9 @@ public class QaTest
   
   public void test2() {
 	  
-	  System.out.println("Executing tests on  "+System.getProperty("propFile")+"  environment");
+	  if(System.getProperty("propFile")==null)
+		  System.setProperty("propFile","default");
+	  System.out.println("====================Executing tests on ================"+System.getProperty("propFile")+"  environment");
 
   }
 }
