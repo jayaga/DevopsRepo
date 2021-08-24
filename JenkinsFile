@@ -28,10 +28,14 @@ pipeline {
            
            stage('Deploy')
             {
+               def deploypath='workspace\\pipeline\\PipelineSource\\Pipeline\\target'
+               def jenkishome = "${JENKINS_HOME}"
+               def warpath= jenkishome+deploypath
            		 steps 
            		 {
               	  echo 'Running Deploy.....'
-             	  echo "${JENKINS_HOME}"
+             	  echo "${warpath}"
+             	  
            		 }
         	}
     }
